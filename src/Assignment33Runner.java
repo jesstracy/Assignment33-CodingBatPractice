@@ -52,4 +52,9 @@ public class Assignment33Runner {
         return maxCharBlockCount;
 //        return -1;
     }
+
+    public String mirrorEnds(String inputString) {
+        
+//        return null;
+    }
 }
