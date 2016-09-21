@@ -36,7 +36,20 @@ public class Assignment33Runner {
 //        return -1;
     }
 
-    public int maxBlock(String str) {
-        return -1;
+    public int maxBlock(String inputString) {
+        int charBlockCount = 0;
+        int maxCharBlockCount = 0;
+        for (int counter = 0; counter < inputString.length(); counter++) {
+            if ((counter != 0) && (inputString.substring(counter, counter + 1).equals(inputString.substring(counter - 1, counter)))) {
+                charBlockCount++;
+            } else {
+                charBlockCount = 1;
+            }
+            if (charBlockCount > maxCharBlockCount) {
+                maxCharBlockCount = charBlockCount;
+            }
+        }
+        return maxCharBlockCount;
+//        return -1;
     }
 }
