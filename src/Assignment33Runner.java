@@ -22,4 +22,8 @@ public class Assignment33Runner {
         }
         return false;
     }
+
+    public int luckySum(int a, int b, int c) {
+        return -1;
+    }
 }
