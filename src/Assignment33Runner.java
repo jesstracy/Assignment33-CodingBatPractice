@@ -35,4 +35,8 @@ public class Assignment33Runner {
         return sum;
 //        return -1;
     }
+
+    public int maxBlock(String str) {
+        return -1;
+    }
 }

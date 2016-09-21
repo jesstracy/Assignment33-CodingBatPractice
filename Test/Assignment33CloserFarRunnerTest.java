@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 /**
  * Created by jessicatracy on 9/21/16.
  */
-public class Assignment33RunnerTest {
+public class Assignment33CloserFarRunnerTest {
     Assignment33Runner myRunner;
     boolean result;
     @Before
