@@ -24,6 +24,15 @@ public class Assignment33Runner {
     }
 
     public int luckySum(int a, int b, int c) {
-        return -1;
+        int sum = 0;
+        if (a != 13 && b != 13 && c != 13) {
+            sum += (a + b + c);
+        } else if (a != 13 && b != 13) {
+            sum += (a + b);
+        } else if (a != 13) {
+            sum += a;
+        }
+        return sum;
+//        return -1;
     }
 }

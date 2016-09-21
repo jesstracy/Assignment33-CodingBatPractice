@@ -74,6 +74,12 @@ public class Assignment33RunnerLuckySumTest {
     }
 
     @Test
+    public void luckySumTestFirstAndThird13() throws Exception {
+        int sum = myRunner.luckySum(13, 6, 13);
+        assertEquals(sum, 0);
+    }
+
+    @Test
     public void luckySumTestThird13() throws Exception {
         int sum = myRunner.luckySum(-5, 6, 13);
         assertEquals(sum, 1);
