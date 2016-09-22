@@ -82,10 +82,12 @@ public class Assignment33Runner {
         char currentChar;
         int sum = 0;
         boolean computedSum;
+        boolean moreChars = false;
         for (String string : pieces) {
             currentNumberString = "";
             computedSum = false;
             for (int counter = 0; counter < string.length(); counter++) {
+                computedSum = false;
                 currentChar = string.charAt(counter);
                 if(Character.isDigit(currentChar)) {
                     currentNumberString += currentChar;
@@ -93,10 +95,11 @@ public class Assignment33Runner {
                     if (!currentNumberString.equals("")) {
                         sum += Integer.parseInt(currentNumberString);
                         computedSum = true;
-                        boolean moreChars = false;
-                        for (int newCounter = counter; newCounter < string.length(); newCounter++) {
+                        moreChars = false;
+                        for (int newCounter = counter + 1; newCounter < string.length(); newCounter++) {
                             if (Character.isDigit(string.charAt(newCounter))) {
                                 moreChars = true;
+                                currentNumberString = "";
                             }
                         }
                         if (!moreChars) {
