@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /**
  * Created by jessicatracy on 9/21/16.
  */
@@ -54,7 +56,23 @@ public class Assignment33Runner {
     }
 
     public String mirrorEnds(String inputString) {
-        
+        String mirrorString = "";
+
+        char[] charList = inputString.toCharArray();
+        char[] reverseCharList = new char[charList.length];
+        int counterForward = 0;
+        for (int counterBackward = charList.length - 1; counterBackward >= 0; counterBackward--) {
+            reverseCharList[counterForward] = charList[counterBackward];
+            counterForward++;
+        }
+        for (int counter = 0; counter < charList.length; counter++) {
+            if (charList[counter] == reverseCharList[counter]) {
+                mirrorString += charList[counter];
+            } else {
+                break;
+            }
+        }
+        return mirrorString;
 //        return null;
     }
 }

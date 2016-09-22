@@ -36,7 +36,7 @@ public class Assignment33RunnerMirrorEndsTest {
     @Test
     public void mirrorEndsTestFromCodingBat3() throws Exception {
         response = myRunner.mirrorEnds("aba");
-        assertEquals("ab", response);
+        assertEquals("aba", response);
     }
 
     @Test
@@ -60,7 +60,7 @@ public class Assignment33RunnerMirrorEndsTest {
     @Test
     public void mirrorEndsTestLongStringWithOverlap() throws Exception {
         response = myRunner.mirrorEnds("aabbccdccbbaa");
-        assertEquals("aabbccd", response);
+        assertEquals("aabbccdccbbaa", response);
     }
 
     @Test
