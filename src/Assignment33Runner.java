@@ -75,4 +75,8 @@ public class Assignment33Runner {
         return mirrorString;
 //        return null;
     }
+
+    public int sumNumbers(String inputString) {
+        return -1;
+    }
 }
