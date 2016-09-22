@@ -77,6 +77,39 @@ public class Assignment33Runner {
     }
 
     public int sumNumbers(String inputString) {
-        return -1;
+        String[] pieces = inputString.split(" ");
+        String currentNumberString;
+        char currentChar;
+        int sum = 0;
+        boolean computedSum;
+        for (String string : pieces) {
+            currentNumberString = "";
+            computedSum = false;
+            for (int counter = 0; counter < string.length(); counter++) {
+                currentChar = string.charAt(counter);
+                if(Character.isDigit(currentChar)) {
+                    currentNumberString += currentChar;
+                } else {
+                    if (!currentNumberString.equals("")) {
+                        sum += Integer.parseInt(currentNumberString);
+                        computedSum = true;
+                        boolean moreChars = false;
+                        for (int newCounter = counter; newCounter < string.length(); newCounter++) {
+                            if (Character.isDigit(string.charAt(newCounter))) {
+                                moreChars = true;
+                            }
+                        }
+                        if (!moreChars) {
+                            break;
+                        }
+                    }
+                }
+            }
+            if (!currentNumberString.equals("") && !computedSum) {
+                sum += Integer.parseInt(currentNumberString);
+            }
+        }
+        return sum;
+//        return -1;
     }
 }
